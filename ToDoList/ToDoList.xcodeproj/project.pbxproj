@@ -14,6 +14,7 @@
 		31281C092812A64A0065B4EF /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31281C082812A64A0065B4EF /* ToDoListTests.swift */; };
 		31281C132812A64A0065B4EF /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31281C122812A64A0065B4EF /* ToDoListUITests.swift */; };
 		31281C152812A64A0065B4EF /* ToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31281C142812A64A0065B4EF /* ToDoListUITestsLaunchTests.swift */; };
+		31281C222812A71D0065B4EF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31281C212812A71D0065B4EF /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		31281C0E2812A64A0065B4EF /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31281C122812A64A0065B4EF /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
 		31281C142812A64A0065B4EF /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		31281C212812A71D0065B4EF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				31281BF92812A6480065B4EF /* ContentView.swift */,
 				31281BFB2812A64A0065B4EF /* Assets.xcassets */,
 				31281BFD2812A64A0065B4EF /* Preview Content */,
+				31281C212812A71D0065B4EF /* Item.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31281BFA2812A6480065B4EF /* ContentView.swift in Sources */,
+				31281C222812A71D0065B4EF /* Item.swift in Sources */,
 				31281BF82812A6480065B4EF /* ToDoListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

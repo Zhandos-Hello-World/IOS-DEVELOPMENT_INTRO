@@ -8,9 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var todoList: [Item] = []
+    @State private var todo: String = ""
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                HStack {
+                    TextField("New to do", text: $todo)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Button("Add") {
+                        if (!self.todo.isEmpty) {
+                            todoList.append(Item(todo: self.todo))
+                            self.todo = ""
+                        }
+                    }.padding(.leading, 5)
+                }.padding()
+                
+                List {
+                    ForEach(todoList) { entry in
+                        Text(entry.todo)
+                    }
+                }
+                
+                
+            }.navigationBarTitle("To do list")
+        }
     }
 }
 
