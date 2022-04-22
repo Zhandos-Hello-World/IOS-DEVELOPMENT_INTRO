@@ -22,6 +22,7 @@ struct ContentView: View {
                         if (!self.todo.isEmpty) {
                             todoList.append(Item(todo: self.todo))
                             self.todo = ""
+                            self.save()
                         }
                     }.padding(.leading, 5)
                 }.padding()
@@ -29,13 +30,30 @@ struct ContentView: View {
                 List {
                     ForEach(todoList) { entry in
                         Text(entry.todo)
-                    }
+                    }.onDelete(perform: self.delete)
                 }
-                
-                
             }.navigationBarTitle("To do list")
+        }.onAppear(perform: load)
+    }
+
+    private func save() {
+      UserDefaults.standard.set(
+        try? PropertyListEncoder().encode(self.todoList), forKey: "myTodosKey"
+      )
+    }
+    private func load() {
+        if let todosData = UserDefaults.standard.value(forKey: "myTodosKey") as? Data {
+            if let todosList = try? PropertyListDecoder().decode(Array<Item>.self, from: todosData) {
+                self.todoList = todosList
+            }
         }
     }
+    private func delete(at offset: IndexSet) {
+        self.todoList.remove(atOffsets: offset)
+        save()
+    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
