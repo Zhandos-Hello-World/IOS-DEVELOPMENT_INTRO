@@ -12,7 +12,7 @@ struct LandmarksDetailView: View {
     
     var body: some View {
         ScrollView {
-            MapView().frame(height: 300)
+            MapView(coordinate: landmark.locationCoordinate).frame(height: 300)
             ImageView(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
