@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LandmarksRow: View {
-    @State var landmark: Landmark
+    var landmark: Landmark
     
     var body: some View {
         HStack {
@@ -27,7 +27,8 @@ struct LandmarksRow: View {
 }
 
 struct LandmarksRow_Previews: PreviewProvider {
-    
+    static var landmarks = ModelData().landmarks
+
     static var previews: some View {
         Group {
             LandmarksRow(landmark: landmarks[1])

@@ -25,7 +25,8 @@ struct ImageView: View {
 }
 
 struct ImageView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ImageView(image: landmarks[2].image)
+        ImageView(image: ModelData().landmarks[2].image)
     }
 }
